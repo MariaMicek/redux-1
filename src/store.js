@@ -27,7 +27,7 @@ store.dispatch({
     text: 'Ma kota',
 })
 
-window.sendMessage = (receiver, text) => {
+export const sendMessage = (receiver, text) => {
     store.dispatch(                             //dispatch zwraca akcje
         sendAction(receiver, text)
     )
