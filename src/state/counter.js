@@ -13,7 +13,7 @@ export const decActionCreator = () => ({
     type: DEC
 })
 
-export const reducer = (state = initialState, action) => {
+export default (state = initialState, action) => {      //reducer jako export domyślny
     console.log(state, action)
     if (action.type === INC) {
         return {
