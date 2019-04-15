@@ -1,5 +1,9 @@
-import { createStore } from 'redux'
-import reducer, { incActionCreator, decActionCreator } from './state/counter'
+import { createStore, combineReducers } from 'redux'
+import counterReducer, { incActionCreator, decActionCreator } from './state/counter'
+
+const reducer = combineReducers({       //Łączenie reducerów
+    counter: counterReducer
+})
 
 export const store = createStore(
     reducer,
