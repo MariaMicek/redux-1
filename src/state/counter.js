@@ -14,7 +14,6 @@ export const decActionCreator = () => ({
 })
 
 export default (state = initialState, action) => {      //reducer jako export domyślny
-    console.log(state, action)
     if (action.type === INC) {
         return {
             ...state,
@@ -27,4 +26,5 @@ export default (state = initialState, action) => {      //reducer jako export do
             number: state.number - 1
         }
     }
+    return state     //!!! gdyby żaden warunek nie został spełniony, trzeba zwrocić niezmieniony stan
 }
