@@ -4,10 +4,12 @@ const reducer = (state, action) => {
     console.log(state)
     console.log(action)
 
-    return 'zielona krowa'
+    return {
+        number: 0,
+    }
 }
 
-export const store = createStore(reducer)
-
-console.log(store)
-console.log(store.getState())
+export const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
